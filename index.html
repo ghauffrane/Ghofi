@@ -67,6 +67,39 @@
         <a href="https://github.com/ghauffrane" class="github"><i class="bi bi-github"></i></a>
         <a href="https://linkedin.com/in/ghofrane-ghanmi-7a8977106" class="linkedin"><i class="bi bi-linkedin"></i></a>
       </div>
+      <div>
+        <!-- Floating Video Container -->
+        <div id="floating-video-container">
+          <iframe 
+              width="100%" 
+              height="100%" 
+              src="https://www.youtube.com/embed/VhC-oxQ6BJk" 
+              frameborder="0" 
+              allowfullscreen
+          ></iframe>
+        </div>
+
+        <!-- Include the YouTube API script -->
+        <script src="https://www.youtube.com/embed/VhC-oxQ6BJk"></script>
+
+        <!-- JavaScript to handle the floating video -->
+        <script>
+            // Create an iframe player with the YouTube API
+            var player;
+            function onYouTubeIframeAPIReady() {
+                player = new YT.Player('floating-video-container', {
+                    events: {
+                        'onReady': onPlayerReady
+                    }
+                });
+            }
+
+            // Resize the video player when ready
+            function onPlayerReady(event) {
+                event.target.setSize(300, 200);
+            }
+        </script>
+      </div>
 
     </div>
   </header><!-- End Header -->

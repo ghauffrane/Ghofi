@@ -7,3 +7,12 @@
     font-size: 36px;
     margin: 5% 0%;
   }
+
+#floating-video-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    max-width: 400px;
+    max-height: 260px;
+    z-index: 1000;
+}
