@@ -64,12 +64,12 @@
             </div>
           </div>
           <div class="col-lg-4 portfolio-info">
-            <h3>Project information</h3>
+            <h3>Project Overview</h3>
             <ul>
-              <li><strong>Objective</strong>: <span id="project-category">Web design</span></li>
-              <li><strong>Methodology</strong>: <span id="project-client">ASU Company</span></li>
-              <li><strong>Technologies</strong>: <span id="project-date">01 March, 2020</span></li>
-              <li><strong>GithubLink</strong>: <a id="project-url" href="#">www.example.com</a></li>
+              <li><strong>Objective</strong>: <span id="project-obj">Web design</span></li>
+              <li><strong>Company</strong>: <span id="project-client">ASU Company</span></li>
+              <li><strong>Technologies</strong>: <span id="project-tech">Python</span></li>
+              <li><strong>projectURL</strong>: <a id="project-url" href="https://github.com/ghauffrane?tab=repositories" class="github"><i class="bi bi-github"> Github </a></li>
             </ul>
             <p id="project-description">
               Project description goes here.
@@ -86,34 +86,34 @@
       // Define your project data (similar to your previous example)
       var portfolioData = {
         project1: {
-          medialist : ["assets/img/portfolio/25940-20170727072951-148TUN7620-1.jpg",
+          medialist : ["assets/img/portfolio/1103-20170713011112-159TUN9888-1.jpg",
                       "assets/img/portfolio/25939-20170727072942-190TUN2007-1.jpg",
                       "assets/img/portfolio/25726-20170727054937-5TUN5331-1.jpg"], 
           title: "Vehicle detection and traffic analytics",
-          Objective: "Category 1",
-          Methodology: "Client 1",
-          Technologies: "01 March, 2020",
-          GithubLink: "www.example1.com",
-          description: "Project 1 description goes here.",
+          objective: "Count vehicles in traffic by category for Digital Ads exposure analysis",
+          client: "Personal",
+          projectURL : "https://github.com/ghauffrane?tab=repositories",
+          technologies: "Python, Yolo, DeepSort tracking, Raspberry Pi, Docker",
+          description: "This is a project within a bigger project for digital signage exposure analytics. The solution enables gathering KPIs about people's exposure to Ads on high-way video billboards, such as the number of cars during ad diffusion in visibility region.",
         },
         project2: {
           medialist: ["assets/img/portfolio/cat_street.jpeg", "assets/img/portfolio/animal_street.jpeg"],
-          title: "Amazing project",
-          Objective: "Category 1",
-          Methodology: "Client 1",
-          Technologies: "01 March, 2020",
-          GithubLink: "www.example1.com",
-          description: "Project 1 description goes here.",
+          title: "Street animal-Vehicle Collision Prevention",
+          objective: "Enable drivers to detect animals crossing streets or highways before collission",
+          client: "Personal",
+          technologies: "Python, EfficientDets, Yolo, Jetson-NANO card",
+          projectURL: "https://github.com/ghauffrane?tab=repositories",
+          description: "As it breaks every person's heart to see cats and dogs being hit by cars or trucks on the side of the road many times, I started this project to minimize this risk by enabling real-time animal detection while driving. Challenges include detection in darkness, detection with high speed driving, ensuring real-time fuctionality with embedded deployment.",
         },
-        project11: {
-          medialist: ["assets/img/portfolio/2b16561826576d4daf1fc89871a67df96ec78670resized_image.png"],
-          title: "Malware detection",
-          Objective: "Category 1",
-          Methodology: "Client 1",
-          Technologies: "01 March, 2020",
-          GithubLink: "www.example1.com",
-          description: "Project 1 description goes here.",
-        }
+        project3: {
+          medialist: ["assets/img/portfolio/ideogram-elyssa0.jpeg"],
+          title: "Elyssa GPT Assistant",
+          objective: "Elyssa is a GPT-based assistant automated with mailing service and learns to master maritime shipping industry",
+          client: "D-SAP in partnership with PANGEA",
+          technologies: "Python, OpenAI, GPT API, Prompt engineering, FastAPI, BERT, Hugging Face, Streamlit",
+          projectURL: "Closed source",
+          description: "Elyssa handles client emails and prepares all necessary information with a response email for shipping agent to close a deal. It also handles other tasks to assist agent with accessing up-to-date and centralized information.",
+        },
         // Add data for other projects similarly
       };
         // Function to populate the image slider
@@ -148,9 +148,9 @@
         var project = portfolioData[projectId];
         if (project) {
           document.getElementById("project-title").textContent = project.title;
-          document.getElementById("project-category").textContent = project.category;
+          document.getElementById("project-obj").textContent = project.objective;
           document.getElementById("project-client").textContent = project.client;
-          document.getElementById("project-date").textContent = project.projectDate;
+          document.getElementById("project-tech").textContent = project.technologies;
           document.getElementById("project-url").href = project.projectURL;
           document.getElementById("project-description").textContent = project.description;
         }
